@@ -118,15 +118,28 @@ a {
   }
 }
 
-
-
-
 @media screen and (min-width: @medium-size) {
   body {
     .font-size(15);
   }
   h1 {
-    text-align: left;
+    .font-size(28);
+    .name {
+      display: inline;
+      .font-size(50);
+      line-height: .5;
+      &::after {
+        content: '\A';
+        white-space: pre;
+      }
+    }
+    .title {
+      position: relative;
+      bottom: -10px;
+      display: inline;
+      .font-size(38);
+      line-height: .75;
+    }
     & + .subheader {
       .font-size(22);
     }
@@ -146,13 +159,15 @@ a {
     .font-size(18);
   }
   h1 {
-    .font-size(39);
+    margin: 1em 0 1.5em;
+    .font-size(40);
     .name {
-      display: inline-block;
-      &::after {
-        content: '\A';
-        white-space:pre;
-      }
+      //display: inline;//inline-block;
+      .font-size(84);
+    }
+    .title {
+      bottom: -22px;
+      .font-size(64);
     }
     & + .subheader {
       .font-size(30);
@@ -177,24 +192,21 @@ a {
     margin: 1em 0 2em;
     padding-left: 10.35em;
     text-indent: -7.3em;
+    text-align: left;
     .font-size(45);
     .name {
-      display: inline;
       .font-size(95);
     }
-    .name {
-      line-height: .5;
-    }
     .title {
-      display: inline-block;
-      position: relative;
       bottom: -24px;
       text-indent: 0;
       .font-size(72);
-      line-height: .75;
     }
     & + .subheader {
       .font-size(33);
+      br {
+        content: ' ';
+      }
     }
   }
 
@@ -206,5 +218,13 @@ a {
   }
   h3 {
     .font-size(36);
+  }
+}
+
+// Hide the <br> in the subheader in mobile, part of the medium range, and x-large:
+@media screen and (max-width: (600px)),
+       screen and (min-width: @xl-size) {
+  h1 + .subheader br {
+    content: ' ';
   }
 }
