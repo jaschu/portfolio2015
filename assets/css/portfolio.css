@@ -460,13 +460,32 @@ a {
 a:hover {
   color: #560214;
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 601px) {
   body {
     font-size: 15px;
     font-size: 0.9375rem;
   }
   h1 {
-    text-align: left;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+  h1 .name {
+    display: inline;
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: .5;
+  }
+  h1 .name::after {
+    content: '\A';
+    white-space: pre;
+  }
+  h1 .title {
+    position: relative;
+    bottom: -10px;
+    display: inline;
+    font-size: 38px;
+    font-size: 2.375rem;
+    line-height: .75;
   }
   h1 + .subheader {
     font-size: 22px;
@@ -489,15 +508,18 @@ a:hover {
     font-size: 1.125rem;
   }
   h1 {
-    font-size: 39px;
-    font-size: 2.4375rem;
+    margin: 1em 0 1.5em;
+    font-size: 40px;
+    font-size: 2.5rem;
   }
   h1 .name {
-    display: inline-block;
+    font-size: 84px;
+    font-size: 5.25rem;
   }
-  h1 .name::after {
-    content: '\A';
-    white-space: pre;
+  h1 .title {
+    bottom: -22px;
+    font-size: 64px;
+    font-size: 4rem;
   }
   h1 + .subheader {
     font-size: 30px;
@@ -524,29 +546,26 @@ a:hover {
     margin: 1em 0 2em;
     padding-left: 10.35em;
     text-indent: -7.3em;
+    text-align: left;
     font-size: 45px;
     font-size: 2.8125rem;
   }
   h1 .name {
-    display: inline;
     font-size: 95px;
     font-size: 5.9375rem;
   }
-  h1 .name {
-    line-height: .5;
-  }
   h1 .title {
-    display: inline-block;
-    position: relative;
     bottom: -24px;
     text-indent: 0;
     font-size: 72px;
     font-size: 4.5rem;
-    line-height: .75;
   }
   h1 + .subheader {
     font-size: 33px;
     font-size: 2.0625rem;
+  }
+  h1 + .subheader br {
+    content: ' ';
   }
   h2 {
     max-width: 1600px;
@@ -558,6 +577,11 @@ a:hover {
   h3 {
     font-size: 36px;
     font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 600px), screen and (min-width: 1650px) {
+  h1 + .subheader br {
+    content: ' ';
   }
 }
 img {
@@ -622,29 +646,29 @@ img {
 .small-6 {
   width: 100%;
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 601px) {
   .row .row {
     margin: 0 -20px;
   }
   .columns {
     padding: 20px;
   }
-  .med-1 {
+  .medium-1 {
     width: 16.66666667%;
   }
-  .med-2 {
+  .medium-2 {
     width: 33.33333333%;
   }
-  .med-3 {
+  .medium-3 {
     width: 50%;
   }
-  .med-4 {
+  .medium-4 {
     width: 66.66666667%;
   }
-  .med-5 {
+  .medium-5 {
     width: 83.33333333%;
   }
-  .med-6 {
+  .medium-6 {
     width: 100%;
   }
 }
@@ -734,6 +758,18 @@ img {
     padding-right: 0;
   }
 }
+.show-small-only,
+.show-medium-only,
+.show-large-only,
+.show-xl-only {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .show-small-only {
+    display: inherit;
+    display: initial;
+  }
+}
 .work-wrapper {
   width: 100%;
   height: auto;
@@ -820,7 +856,7 @@ img {
   border-color: #e493a5;
 }
 .bg-xenoterric a {
-  color: #f2ccd5;
+  color: #ebb0bd;
 }
 .bg-xenoterric a:hover {
   color: #ffffff;
@@ -951,12 +987,12 @@ img {
   border: 3px solid #9d344b;
   border-radius: 3px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .about-wrapper .columns + .columns {
     padding-top: 0;
   }
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 601px) {
   .about-wrapper {
     margin: 0 0 50px;
   }
