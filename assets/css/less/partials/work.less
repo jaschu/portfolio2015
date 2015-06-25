@@ -115,10 +115,14 @@
 .url {
   font-weight: 600;
 
+  &.bemidji:hover {
+    color: @bemidji-hover;
+  }
+
   &.ursinus {
     color: @ursinus;
     &:hover {
-      color: darken(@ursinus,10%);
+      color: @ursinus-hover;
     }
   }
 
@@ -127,6 +131,14 @@
     &:hover {
       color: @lakeforest-hover;
     }
+  }
+
+  &.alma:hover {
+    color: @alma-hover;
+  }
+
+  &.lewis-clark:hover {
+    color: @lewis-clark-hover;
   }
 
   &.menloschool {

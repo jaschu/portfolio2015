@@ -527,8 +527,8 @@ a:hover {
   }
   h2 {
     margin-top: .5em;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin-left: 25px;
+    margin-right: 25px;
     font-size: 48px;
     font-size: 3rem;
   }
@@ -882,17 +882,26 @@ img {
 .url {
   font-weight: 600;
 }
+.url.bemidji:hover {
+  color: #88b6ad;
+}
 .url.ursinus {
   color: #98012e;
 }
 .url.ursinus:hover {
-  color: #65011f;
+  color: #4c101a;
 }
 .url.lakeforest {
   color: #c31330;
 }
 .url.lakeforest:hover {
   color: #96051e;
+}
+.url.alma:hover {
+  color: #008382;
+}
+.url.lewis-clark:hover {
+  color: #e66b3f;
 }
 .url.menloschool {
   color: #0047a9;
