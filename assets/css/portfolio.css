@@ -774,6 +774,9 @@ img {
   .work-wrapper > .row {
     margin-bottom: 1em;
   }
+  .work-wrapper > .row:last-child {
+    margin-bottom: 0;
+  }
 }
 .work-wrapper .stretch-background {
   color: #ffffff;
@@ -884,6 +887,7 @@ img {
   }
 }
 .urls {
+  margin-bottom: 0;
   text-align: center;
 }
 .url {
