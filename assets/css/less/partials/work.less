@@ -1,0 +1,194 @@
+.work-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  @media screen and (min-width: @medium-size) {
+    & > .row {
+      margin-bottom: 1em;
+    }
+  }
+
+  .stretch-background {
+    color: @white;
+    .thumb {
+      border-color: @white;
+      @media screen and (min-width: @xl-size) {
+        padding: 0 0 100%;
+      }
+    }
+    .url {
+      color: @white;
+      &:hover {
+
+      }
+    }
+  }
+}
+
+.shade {
+  padding: 25px;
+  .rgba-background(0,0,0,.2);
+}
+
+
+// Specific site backgrounds
+.bg-bemidji {
+  background: @bemidji url(../images/bgs/trees-1x.png) 100% 100% repeat-x;
+}
+
+.bg-alma {
+  background: url(../images/bgs/alma-plaid-tile.jpg) 0 50%;
+}
+
+.bg-lewis-clark {
+  position: relative;
+  background-color: #141e06;
+  overflow: hidden;
+  .bg-lewis-clark-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    z-index: 0;
+    background: url(../images/bgs/xl/lewis-clark.jpg) 100% 0;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+}
+
+.bg-xenoterric {
+  background: url(../images/bgs/xenoterric@1x.jpg);
+  background-size: cover;
+  color: @white;
+  .thumb {
+    border-color: @rose;
+    &:hover {
+      border-color: @white;
+    }
+  }
+  a {
+    color: lighten(@rose, 14%);
+    &:hover {
+      color: @white;
+    }
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Typography:
+.built-with {
+  .font-size(13);
+  span {
+    font-style: italic;
+  }
+  @media screen and (min-width: @large-size) {
+    .font-size(14);
+  }
+  @media screen and (min-width: @xl-size) {
+    .font-size(16);
+  }
+}
+
+.url {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+
+  &.ursinus {
+    color: @ursinus;
+    &:hover {
+      color: darken(@ursinus,10%);
+    }
+  }
+
+  &.lakeforest {
+    color: @lakeforest;
+    &:hover {
+      color: @lakeforest-hover;
+    }
+  }
+
+  &.menloschool {
+    color: @menloschool;
+    &:hover {
+      color: @menloschool-hover;
+    }
+  }
+}
+
+// Thumbnail backgrounds:
+
+.thumb {
+  &.bemidji {
+    background-image: url(../images/screenshots/bsu@1x.jpg);
+  }
+  &.ursinus {
+    background-image: url(../images/screenshots/ursinus@1x.jpg);
+  }
+  &.lakeforest {
+    background-image: url(../images/screenshots/lake-forest@1x.jpg);
+  }
+  &.alma {
+    background-image: url(../images/screenshots/alma@1x.jpg);
+  }
+  &.lewis-clark {
+    background-image: url(../images/screenshots/lewis-clark@1x.jpg);
+  }
+  &.menloschool {
+    background-image: url(../images/screenshots/menloschool@1x.jpg);
+  }
+  &.nixle {
+    background-image: url(../images/screenshots/Nixle-Los-Angeles@1x.jpg);
+  }
+  &.xenoterric {
+    background-image: url(../images/screenshots/xenoterric@1x.jpg);
+  }
+  &.everywheremag {
+    background-image: url(../images/screenshots/everywheremag@1x.jpg);
+  }
+}
+
+@media @retina {
+  .thumb {
+    &.bemidji {
+      background-image: url(../images/screenshots/bsu@2x.jpg);
+    }
+    &.ursinus {
+      background-image: url(../images/screenshots/ursinus@2x.jpg);
+    }
+    &.lakeforest {
+      background-image: url(../images/screenshots/lake-forest@2x.jpg);
+    }
+    &.alma {
+      background-image: url(../images/screenshots/alma@2x.jpg);
+    }
+    &.lewis-clark {
+      background-image: url(../images/screenshots/lewis-clark@2x.jpg);
+    }
+    &.menloschool {
+      background-image: url(../images/screenshots/menloschool@2x.jpg);
+    }
+    &.nixle {
+      background-image: url(../images/screenshots/Nixle-Los-Angeles@2x.jpg);
+    }
+    &.xenoterric {
+      background-image: url(../images/screenshots/xenoterric@2x.jpg);
+    }
+    &.everywheremag {
+      background-image: url(../images/screenshots/everywheremag@2x.jpg);
+    }
+  }
+}

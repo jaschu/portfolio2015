@@ -1,0 +1,85 @@
+// Grid system, so to speak
+
+// Breakpoints:
+@medium-size: 501px;
+@large-size: 801px;
+@xl-size: 1650px;
+
+// Column generator:
+.make-columns(@c, @s: small, @i: 1) when (@i =< @c) {
+  .@{s}-@{i} {
+    width: (@i * 100% / @c);
+  }
+  .make-columns (@c, @s, (@i+1));
+}
+
+
+
+.row {
+  margin: 0;
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.columns {
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.make-columns(6);
+
+
+@media screen and (min-width: @medium-size){
+  .row {
+    margin: 0 20px;
+    .row {
+      margin: 0 -20px;
+    }
+  }
+  .columns {
+    padding: 20px;
+    .row .row & {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .make-columns(6, med);
+}
+
+@media screen and (min-width: @large-size){
+  .columns {
+    padding: 25px;
+  }
+  .row .row {
+    margin: 0 -25px;
+  }
+  .make-columns(6, large);
+}
+
+@media screen and (min-width: @xl-size){
+  .row {
+    margin: 0 auto;
+    max-width: 1650px;
+  }
+  .make-columns(6, xl);
+
+  .xl-4.stretch-left {
+    width: 2080px;
+    padding-bottom: 100px;
+    margin-left: -980px;
+    padding-left: 1005px;
+  }
+  .xl-4.stretch-right {
+    width: 2080px;
+    padding-bottom: 100px;
+    margin-right: -980px;
+    padding-right: 1005px;
+  }
+}

@@ -1,0 +1,179 @@
+// Typography
+
+// Type stack variables
+@fanwood-stack: 'Fanwood', 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+@ostrich-stack: 'Ostrich Sans Black', sans-serif;
+
+// Font face definitions
+@font-face {
+  font-family: 'Fanwood';
+  src: url('../fonts/fanwood-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/fanwood-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fanwood-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/fanwood-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fanwood-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Ostrich Sans Black';
+  src: url('../fonts/ostrich-sans-black.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ostrich-sans-black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ostrich-sans-black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/ostrich-sans-black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ostrich-sans-black.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html {
+  //font-size: 62.5%; /* 10px base for rems */
+}
+body {
+  width: 100%;
+  background-color: #fff8f4;
+  font-family: @fanwood-stack;
+  .font-size(14);
+}
+h1, h2 {
+  font-weight: 400;
+}
+h1 {
+  color: @header-charcoal;
+  .font-size(25);
+  line-height: 1.3;
+  text-align: center;
+
+  .name, .title {
+    display: block;
+    font-family: @ostrich-stack;
+    line-height: 1;
+  }
+
+  .name {
+    color: @red;
+    .font-size(32);
+  }
+
+  .title {
+    color: @purple;
+    .font-size(28);
+  }
+
+  & + .subheader {
+    color: @header-charcoal;
+    .font-size(16);
+    text-align: center;
+    a {
+      color: @red;
+      font-family: @ostrich-stack;
+      &:hover {
+        color: @rose;
+        background-color: @dark-red;
+      }
+    }
+  }
+}
+
+h2 {
+  margin: .5em 15px .25em;
+  color: @purple;
+  font-family: @ostrich-stack;
+  .font-size(24);
+  line-height: 1;
+  overflow: hidden;
+  span {
+    position: relative;
+  }
+  span::after {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 102%;
+    bottom: 25%;
+    height: 1px;
+    width: 1600px;
+    background-color: @purple;
+  }
+}
+
+h3 {
+  margin: 0 0 .25em;
+  .font-size(19);
+  .columns & {
+    text-align: center;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.3636;
+}
+a {
+  color: @red;
+  transition: border-color .3s ease, color .3s ease, background-color .3s ease;
+}
+
+
+
+
+@media screen and (min-width: @medium-size) {
+  body {
+    .font-size(15);
+  }
+  h2 {
+    margin: .5em 20px .25em;
+  }
+}
+
+@media screen and (min-width: @large-size) {
+  body {
+    .font-size(16);
+  }
+  h1 {
+    text-align: left;
+    .name {
+      display: inline-block;
+      &::after {
+        content: '\A';
+        white-space:pre;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @xl-size) {
+  body {
+    .font-size(22);
+  }
+  h1 {
+    margin: 1em 0 2em;
+    padding-left: 10.35em;
+    text-indent: -7.3em;
+    .font-size(45);
+    .name {
+      display: inline;
+      .font-size(95);
+    }
+    .name {
+      line-height: .5;
+    }
+    .title {
+      display: inline-block;
+      position: relative;
+      bottom: -24px;
+      text-indent: 0;
+      .font-size(72);
+      line-height: .75;
+    }
+    & + .subheader {
+      .font-size(33);
+    }
+  }
+
+  h2 {
+    max-width: 1600px;
+    margin: .5em auto .25em;
+    .font-size(60);
+  }
+  h3 {
+    .font-size(36);
+  }
+}

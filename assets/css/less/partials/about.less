@@ -1,0 +1,46 @@
+// About Me section:
+
+.about-wrapper {
+  background-color: @dark-red;
+  color: @light-pink;
+
+  .columns {
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a{
+    color: @rose;
+    &:hover {
+      color: @light-pink;
+    }
+    &[href^="mailto:"] {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+  }
+
+  img {
+    border: 3px solid @red;
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: (@medium-size - 1)) {
+    .columns + .columns {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: @medium-size) {
+    margin: 0 0 50px;
+  }
+
+  @media screen and (min-width: @xl-size) {
+    .columns {
+      p:first-child {
+        margin-top: 2em;
+      }
+    }
+  }
+}
