@@ -602,6 +602,7 @@ img {
   overflow: hidden;
   background-position: 0 0;
   background-size: cover;
+  background-clip: border-box;
 }
 .thumb:hover {
   border-color: #e493a5;
