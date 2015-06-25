@@ -876,10 +876,11 @@ img {
     font-size: 1rem;
   }
 }
-.url {
-  display: block;
-  font-weight: 600;
+.urls {
   text-align: center;
+}
+.url {
+  font-weight: 600;
 }
 .url.ursinus {
   color: #98012e;
