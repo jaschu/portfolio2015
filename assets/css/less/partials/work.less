@@ -3,7 +3,7 @@
   height: auto;
   overflow: hidden;
 
-  @media screen and (min-width: @medium-size) {
+  @media screen and (min-width: @large-size) {
     & > .row {
       margin-bottom: 1em;
     }
@@ -16,7 +16,7 @@
       &:hover {
         border-color: @rose;
       }
-      @media screen and (min-width: @xl-size) {
+      @media screen and (min-width: @large-size) {
         padding: 0 0 100%;
       }
     }
@@ -48,7 +48,8 @@
   position: relative;
   background-color: #141e06;
   overflow: hidden;
-  .bg-lewis-clark-wrapper {
+  & > h3,
+  & > .row {
     position: relative;
     z-index: 1;
   }
@@ -133,7 +134,6 @@
 }
 
 // Thumbnail backgrounds:
-
 .thumb {
   &.bemidji {
     background-image: url(../images/screenshots/bsu@1x.jpg);

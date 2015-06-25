@@ -388,6 +388,7 @@ h1 {
 h1 .name,
 h1 .title {
   display: block;
+  margin-bottom: -0.16666em;
   font-family: 'Ostrich Sans Black', sans-serif;
   line-height: 1;
 }
@@ -403,8 +404,8 @@ h1 .title {
 }
 h1 + .subheader {
   color: #3e3e3e;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
   text-align: center;
 }
 h1 + .subheader a {
@@ -419,7 +420,7 @@ h1 + .subheader a:hover {
   background-color: #560214;
 }
 h2 {
-  margin: .5em 15px .25em;
+  margin: 1em 15px .25em;
   color: #7a296a;
   font-family: 'Ostrich Sans Black', sans-serif;
   font-size: 24px;
@@ -464,17 +465,32 @@ a:hover {
     font-size: 15px;
     font-size: 0.9375rem;
   }
-  h2 {
-    margin: .5em 20px .25em;
-  }
-}
-@media screen and (min-width: 801px) {
-  body {
-    font-size: 16px;
-    font-size: 1rem;
-  }
   h1 {
     text-align: left;
+  }
+  h1 + .subheader {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 951px) {
+  body {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 39px;
+    font-size: 2.4375rem;
   }
   h1 .name {
     display: inline-block;
@@ -482,6 +498,21 @@ a:hover {
   h1 .name::after {
     content: '\A';
     white-space: pre;
+  }
+  h1 + .subheader {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  h2 {
+    margin-top: .5em;
+    margin-left: 45px;
+    margin-right: 45px;
+    font-size: 48px;
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 @media screen and (min-width: 1650px) {
@@ -519,7 +550,8 @@ a:hover {
   }
   h2 {
     max-width: 1600px;
-    margin: .5em auto .25em;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 60px;
     font-size: 3.75rem;
   }
@@ -568,6 +600,10 @@ img {
   padding: 15px;
   box-sizing: border-box;
 }
+.row .row .columns {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .small-1 {
   width: 16.66666667%;
 }
@@ -596,10 +632,6 @@ img {
   .columns {
     padding: 20px;
   }
-  .row .row .columns {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
   .med-1 {
     width: 16.66666667%;
   }
@@ -619,7 +651,7 @@ img {
     width: 100%;
   }
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 951px) {
   .columns {
     padding: 25px;
   }
@@ -643,6 +675,24 @@ img {
   }
   .large-6 {
     width: 100%;
+  }
+  .large-4.stretch-left {
+    width: 80%;
+    padding-bottom: 75px;
+    margin-left: -13.33333333%;
+    padding-left: 13.33333333%;
+  }
+  .large-4.stretch-left > .row {
+    padding-left: 25px;
+  }
+  .large-4.stretch-right {
+    width: 80%;
+    padding-bottom: 75px;
+    margin-right: -13.33333333%;
+    padding-right: 13.33333333%;
+  }
+  .large-4.stretch-right > .row {
+    padding-right: 25px;
   }
 }
 @media screen and (min-width: 1650px) {
@@ -668,17 +718,23 @@ img {
   .xl-6 {
     width: 100%;
   }
-  .xl-4.stretch-left {
+  .large-4.stretch-left {
     width: 2080px;
     padding-bottom: 100px;
     margin-left: -980px;
     padding-left: 1005px;
   }
-  .xl-4.stretch-right {
+  .large-4.stretch-left > .row {
+    padding-left: 0;
+  }
+  .large-4.stretch-right {
     width: 2080px;
     padding-bottom: 100px;
     margin-right: -980px;
     padding-right: 1005px;
+  }
+  .large-4.stretch-right > .row {
+    padding-right: 0;
   }
 }
 .work-wrapper {
@@ -686,7 +742,7 @@ img {
   height: auto;
   overflow: hidden;
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 951px) {
   .work-wrapper > .row {
     margin-bottom: 1em;
   }
@@ -700,7 +756,7 @@ img {
 .work-wrapper .stretch-background .thumb:hover {
   border-color: #e493a5;
 }
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 951px) {
   .work-wrapper .stretch-background .thumb {
     padding: 0 0 100%;
   }
@@ -734,7 +790,8 @@ img {
   background-color: #141e06;
   overflow: hidden;
 }
-.bg-lewis-clark .bg-lewis-clark-wrapper {
+.bg-lewis-clark > h3,
+.bg-lewis-clark > .row {
   position: relative;
   z-index: 1;
 }
@@ -781,7 +838,7 @@ img {
 .built-with span {
   font-style: italic;
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 951px) {
   .built-with {
     font-size: 14px;
     font-size: 0.875rem;
@@ -873,6 +930,7 @@ img {
   }
 }
 .about-wrapper {
+  margin: 0 0 20px;
   background-color: #560214;
   color: #fbf0f3;
 }
@@ -903,7 +961,7 @@ img {
     margin: 0 0 50px;
   }
 }
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 951px) {
   .about-wrapper .columns p:first-child {
     margin-top: 2em;
   }

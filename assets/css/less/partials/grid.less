@@ -2,7 +2,7 @@
 
 // Breakpoints:
 @medium-size: 501px;
-@large-size: 801px;
+@large-size: 951px;
 @xl-size: 1650px;
 
 // Column generator:
@@ -34,6 +34,10 @@
   float: left;
   padding: 15px;
   box-sizing: border-box;
+  .row .row & {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .make-columns(6);
@@ -48,10 +52,6 @@
   }
   .columns {
     padding: 20px;
-    .row .row & {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
   }
   .make-columns(6, med);
 }
@@ -64,6 +64,26 @@
     margin: 0 -25px;
   }
   .make-columns(6, large);
+
+
+  .large-4.stretch-left {
+    width: 80%;
+    padding-bottom: 75px;
+    margin-left: (200%/3 - 80%);
+    padding-left: (80% - 200%/3);
+    & > .row {
+      padding-left: 25px;
+    }
+  }
+  .large-4.stretch-right {
+    width: 80%;
+    padding-bottom: 75px;
+    margin-right: (200%/3 - 80%);
+    padding-right: (80% - 200%/3);
+    & > .row {
+      padding-right: 25px;
+    }
+  }
 }
 
 @media screen and (min-width: @xl-size){
@@ -73,16 +93,22 @@
   }
   .make-columns(6, xl);
 
-  .xl-4.stretch-left {
+  .large-4.stretch-left {
     width: 2080px;
     padding-bottom: 100px;
     margin-left: -980px;
     padding-left: 1005px;
+    & > .row {
+      padding-left: 0;
+    }
   }
-  .xl-4.stretch-right {
+  .large-4.stretch-right {
     width: 2080px;
     padding-bottom: 100px;
     margin-right: -980px;
     padding-right: 1005px;
+    & > .row {
+      padding-right: 0;
+    }
   }
 }
