@@ -408,6 +408,9 @@ h1 + .subheader {
   text-align: center;
 }
 h1 + .subheader a {
+  display: inline-block;
+  padding: 4px 4px 0;
+  margin: 0 -4px;
   color: #9d344b;
   font-family: 'Ostrich Sans Black', sans-serif;
 }
@@ -452,6 +455,9 @@ p {
 a {
   color: #9d344b;
   transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+a:hover {
+  color: #560214;
 }
 @media screen and (min-width: 501px) {
   body {
@@ -540,6 +546,9 @@ img {
   background-position: 0 0;
   background-size: cover;
 }
+.thumb:hover {
+  border-color: #e493a5;
+}
 .row {
   margin: 0;
 }
@@ -550,6 +559,9 @@ img {
 }
 .row::after {
   clear: both;
+}
+.row .row {
+  margin: 0 -15px;
 }
 .columns {
   float: left;
@@ -685,6 +697,9 @@ img {
 .work-wrapper .stretch-background .thumb {
   border-color: #ffffff;
 }
+.work-wrapper .stretch-background .thumb:hover {
+  border-color: #e493a5;
+}
 @media screen and (min-width: 1650px) {
   .work-wrapper .stretch-background .thumb {
     padding: 0 0 100%;
@@ -745,10 +760,10 @@ img {
   color: #ffffff;
 }
 .bg-xenoterric .thumb {
-  border-color: #e493a5;
+  border-color: #ffffff;
 }
 .bg-xenoterric .thumb:hover {
-  border-color: #ffffff;
+  border-color: #e493a5;
 }
 .bg-xenoterric a {
   color: #f2ccd5;
