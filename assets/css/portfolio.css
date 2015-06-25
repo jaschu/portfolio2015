@@ -758,18 +758,6 @@ img {
     padding-right: 0;
   }
 }
-.show-small-only,
-.show-medium-only,
-.show-large-only,
-.show-xl-only {
-  display: none;
-}
-@media screen and (max-width: 600px) {
-  .show-small-only {
-    display: inherit;
-    display: initial;
-  }
-}
 .work-wrapper {
   width: 100%;
   height: auto;
@@ -814,6 +802,11 @@ img {
 }
 .bg-bemidji {
   background: #004a3b url(../images/bgs/trees-1x.png) 100% 100% repeat-x;
+}
+@media screen and (max-width: 950px) {
+  .bg-bemidji {
+    padding-bottom: 60px;
+  }
 }
 .bg-alma {
   background: url(../images/bgs/alma-plaid-tile.jpg) 0 50%;
