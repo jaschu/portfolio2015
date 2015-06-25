@@ -868,6 +868,11 @@ img {
 .bg-xenoterric > *:last-child {
   margin-bottom: 0;
 }
+.bg-xenoterric .urls {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .built-with {
   font-size: 13px;
   font-size: 0.8125rem;
