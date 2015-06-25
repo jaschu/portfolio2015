@@ -1000,7 +1000,7 @@ img {
     margin: 0 0 50px;
   }
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1650px) {
   .about-wrapper .columns p:first-child {
     margin-top: 2em;
   }
