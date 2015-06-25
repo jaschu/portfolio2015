@@ -623,9 +623,6 @@ img {
   width: 100%;
 }
 @media screen and (min-width: 501px) {
-  .row {
-    margin: 0 20px;
-  }
   .row .row {
     margin: 0 -20px;
   }
@@ -766,21 +763,21 @@ img {
 }
 .shade {
   padding: 25px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .no-rgba .shade {
   background: #000000;
 }
 .lt-ie9 .shade {
   background: transparent;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)";
   /* IE8 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
   /* IE6 & 7 */
   zoom: 1;
 }
 .bg-bemidji {
-  background: #005947 url(../images/bgs/trees-1x.png) 100% 100% repeat-x;
+  background: #004a3b url(../images/bgs/trees-1x.png) 100% 100% repeat-x;
 }
 .bg-alma {
   background: url(../images/bgs/alma-plaid-tile.jpg) 0 50%;
