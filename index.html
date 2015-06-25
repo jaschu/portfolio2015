@@ -8,14 +8,14 @@
     <link href="assets/css/portfolio.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="row">
-      <div class="small-6 columns">
+    <header class="row">
+      <nav class="small-6 columns">
         <h1>
           <span class="exposition">And now, the portfolio of</span> <span class="name">Jason Schupp</span> <span class="exposition">who is a</span> <span class="title">web developer</span> <span class="exposition">in Oakland, California.</span>
         </h1>
-        <p class="subheader">That&rsquo;s me. Let&rsquo;s start with <a href="#recent">recent work</a>, followed by <a href="#older">older work</a>,<br> then a little <a href="#about">about me</a> and how to get in touch.</p>
-      </div>
-    </div>
+        <p class="subheader">That&rsquo;s me. Let&rsquo;s start with <a data-scroll href="#recent">recent work</a>, followed by <a data-scroll href="#older">older work</a>,<br> then a little <a data-scroll href="#about">about me</a> and how to get in touch.</p>
+      </nav>
+    </header>
 
     <h2 id="recent"><span>Recent Work</span></h2>
     <div class="work-wrapper">
@@ -125,11 +125,19 @@
           <img src="assets/images/headshot.jpg" alt="headshot">
         </div>
         <div class="small-6 medium-4 columns">
-          <p>Hello! I&rsquo;m an experienced front-end web developer committed to quality in user experience, solid support across devices and browsers, and being thorough in the details. I&rsquo;m able to be self-directed in seeing projects through to completion, and I enjoy collaborating with technical and non-technical colleagues alike. I&rsquo;m quick in picking up new technologies and methodologies. I&rsquo;m currently looking for new full-time or freelance work that will expand my experience through projects which leave a positive impact on their audiences. If you want to get in touch about working with you, start with an email at <a href="mailto:js[ at ]jasonschupp[ dot ]com">moc.ppuhcsnosaj@sj</a>, or you can peruse my <a href="/resume/">r&eacute;sum&eacute;</a>.</p>
-          <p>Creating semantically rich sites in HTML, CSS and JavaScript is what I excel at and enjoy most, making a site look good and function well on screens of any size. I&rsquo;ve also got experience integrating new back- and front-end functionality, having worked with PHP (including LiveWhale, WordPress, and CodeIgniter) and Python (Django). Other tools I&rsquo;ve used (either a little or a lot) include Less, Sass, Foundation, Bootstrap, jQuery, YUI 2 & 3, Backbone.js, PhotoShop, Git, SVN, CVS.</p>
+          <p>Hello! I&rsquo;m an experienced front-end web developer committed to quality in user experience, solid support across devices and browsers, and being thorough in the details. I&rsquo;m able to be self-directed in seeing projects through to completion, and I enjoy collaborating with technical and non-technical colleagues alike. I&rsquo;m quick in picking up new technologies and methodologies. I&rsquo;m currently looking for new full-time or freelance work that will expand my experience through projects which leave a positive impact on their audiences. If you want to get in touch about working with you, start with an email at <a href="mailto:js[ at ]jasonschupp[ dot ]com">moc.ppuhcsnosaj@sj</a>.</p>
+          <p>Creating semantically rich sites in HTML, CSS and JavaScript is what I excel at and enjoy most, making a site look good and function well on screens of any size. I&rsquo;ve also got experience integrating new back- and front-end functionality, having worked with PHP (including LiveWhale, WordPress, and CodeIgniter) and Python (Django). Other tools I&rsquo;ve used (either a little or a lot) include Less, Sass, Foundation, Bootstrap, jQuery, YUI 2 & 3, Backbone.js, PhotoShop, Git, SVN, and CVS.</p>
           <p>I live in Oakland with my boyfriend, our cat, and too many board games. I also contribute to the Elsewhere Philatelic Society narrative collective as a writer, playtester, location scout, folder, stamper, and occasional event designer.</p>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+    <script>
+      smoothScroll.init({
+        'speed': 250,
+        'easing': 'easeInOutQuad',
+        'offset': 20
+      });
+    </script>
   </body>
 </html>
