@@ -369,7 +369,8 @@ th {
 }
 body {
   width: 100%;
-  background-color: #fff8f4;
+  background: #fff8f4 url(../images/bgs/portfolio.gif) 50% 0 repeat;
+  background-attachment: fixed;
   font-family: 'Fanwood', 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -986,7 +987,6 @@ img {
   }
 }
 .about-wrapper {
-  margin: 0 0 20px;
   background-color: #560214;
   color: #fbf0f3;
 }
@@ -1012,13 +1012,18 @@ img {
     padding-top: 0;
   }
 }
-@media screen and (min-width: 601px) {
-  .about-wrapper {
-    margin: 0 0 50px;
-  }
-}
 @media screen and (min-width: 1650px) {
   .about-wrapper .columns p:first-child {
     margin-top: 2em;
   }
+}
+footer {
+  padding: .5em 20px;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.25;
 }
