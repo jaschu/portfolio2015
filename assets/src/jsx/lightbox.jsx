@@ -11,16 +11,22 @@
        * Previous
        * Next
 
-
+Let's see
 
  */
+
+var SLIDES = [
+  { thumbnail: 'assets/images/screenshots/bsu@2x.jpg', caption: 'This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption.This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption.' },
+  { thumbnail: 'assets/images/screenshots/bsu@2x.jpg', caption: 'One more caption, heyo.' },
+  { thumbnail: 'assets/images/screenshots/bsu@2x.jpg', caption: 'Third slide!' }
+];
 
 var SlideControls = React.createClass({
     render: function(){
       return (
-        <div class="controls">
-          <a href="#" class="left">Previous</a>
-          <a href="#" class="right">Next</a>
+        <div className="controls">
+          <a href="#" className="left">Previous</a>
+          <a href="#" className="right">Next</a>
         </div>
       );
     }
@@ -28,15 +34,18 @@ var SlideControls = React.createClass({
 
 var Slide = React.createClass({
     render: function(){
-      var displaySlide = this.prop.slides[0]; // First slide for now
+      var displaySlide = this.props.slides[this.props.current]; // First slide for now
+      console.log(this.props.current);
       return (
         <figure>
-          <div class="thumb-wrapper">
-            <div class="thumb-pane">
-              <img src="{displaySlide.thumbnail}" alt="" />
+          <div className="thumb-wrapper">
+            <div className="thumb-pane">
+              <img src={displaySlide.thumbnail} alt="" />
             </div>
           </div>
-          <figcaption>{displaySlide.caption}</figcaption>
+          <figcaption>
+            {displaySlide.caption}
+          </figcaption>
         </figure>
       );
     }
@@ -50,16 +59,12 @@ var Lightbox = React.createClass({
     },
     render: function(){
       return (
-        <div class="slide">
-          <Slide slides={this.prop.slides} />
-          <SlideControls />
+        <div className="slide">
+          <Slide slides={this.props.slides} current={this.state.currentSlide} />
+          <SlideControls slides={this.props.slides} current={this.state.currentSlide} />
         </div>
       );
     }
 });
-
-var SLIDES = [
-  { thumbnail: 'assets/images/screenshots/bsu@2x.jpg', caption: '<p>This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption.</p><p>This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption. This is a figure caption.</p>' }
-]
 
 React.render(<Lightbox slides={SLIDES} />, document.getElementById('js-lightbox'));
