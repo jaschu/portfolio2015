@@ -1,5 +1,12 @@
 /* Lightbox for slideshows */
 
+.light-shade {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  .rgba-background(0,0,0,.4);
+}
+
 .slide {
   position: fixed;
   top: 10px;
@@ -10,10 +17,14 @@
   border-radius: 3px;
   padding: 0 0 45px;
   background: #fff8f4 url(../images/bgs/portfolio.gif) 50% 0 repeat;
+  overflow: hidden;
 
   figure {
+    position: absolute;
     margin: 0;
     padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
 
     img {
       display: block;
@@ -78,9 +89,43 @@
     .font-size(14);
   }
 }
-.light-shade {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1;
-  .rgba-background(0,0,0,.4);
+
+/* animations */
+.slide-appear,
+.slideinfo-enter {
+  opacity: 0.01;
 }
+.slide-appear.slide-appear-active,
+.slideinfo-enter.slideinfo-enter-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.slide-leave,
+.slideinfo-leave {
+  opacity: 1;
+}
+.slide-leave.slide-leave-active,
+.slideinfo-leave.slideinfo-leave-active {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+//.slideinfo-enter {
+//  left: 100%;
+//  right: -100%;
+//  &.slideinfo-enter-active {
+//    left: 0;
+//    right: 0;
+//    transition: left .5s ease-out, right .5s ease-out;
+//  }
+//}
+//.slideinfo-leave {
+//  left: 0;
+//  right: 0;
+//  &.slideinfo-leave-active {
+//    left: -100%;
+//    right: 100%;
+//    transition: left .5s ease-out, right .5s ease-out;
+//  }
+//}

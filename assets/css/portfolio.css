@@ -1028,6 +1028,26 @@ footer p {
   line-height: 1.25;
 }
 /* Lightbox for slideshows */
+.light-shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.no-rgba .light-shade {
+  background: #000000;
+}
+.lt-ie9 .light-shade {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000)";
+  /* IE8 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+  /* IE6 & 7 */
+  zoom: 1;
+}
 .slide {
   position: fixed;
   top: 10px;
@@ -1038,10 +1058,14 @@ footer p {
   border-radius: 3px;
   padding: 0 0 45px;
   background: #fff8f4 url(../images/bgs/portfolio.gif) 50% 0 repeat;
+  overflow: hidden;
 }
 .slide figure {
+  position: absolute;
   margin: 0;
   padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .slide figure img {
   display: block;
@@ -1111,23 +1135,22 @@ footer p {
   font-size: 14px;
   font-size: 0.875rem;
 }
-.light-shade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4);
+/* animations */
+.slide-appear,
+.slideinfo-enter {
+  opacity: 0.01;
 }
-.no-rgba .light-shade {
-  background: #000000;
+.slide-appear.slide-appear-active,
+.slideinfo-enter.slideinfo-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 }
-.lt-ie9 .light-shade {
-  background: transparent;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000)";
-  /* IE8 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
-  /* IE6 & 7 */
-  zoom: 1;
+.slide-leave,
+.slideinfo-leave {
+  opacity: 1;
+}
+.slide-leave.slide-leave-active,
+.slideinfo-leave.slideinfo-leave-active {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-in;
 }
