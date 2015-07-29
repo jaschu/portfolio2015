@@ -1,18 +1,5 @@
 /**
- *
-
- Components:
-
- * Lightbox -parent component
-   * shade - tag
-   * slide - component
-     * slideContents
-     * controls -component
-       * Previous
-       * Next
-
-Let's see
-
+ * Lightbox requires React.js with add-ons for CSSTransitionGroup
  */
 
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
@@ -22,17 +9,6 @@ var SLIDES = [
   { thumbnail: 'alma@2x.jpg', caption: 'One more caption, one more screenshot.' },
   { thumbnail: 'lewis-clark@2x.jpg', caption: 'Third slide! What, fantastic. That third slide worked.' }
 ];
-
-// var SlideControls = React.createClass({
-//     render: function(){
-//       return (
-//         <div className="controls">
-//           <a href="#" onClick={this.props.prevSlide} className="left">Previous</a>
-//           <a href="#" onClick={this.props.nextSlide} className="right">Next</a>
-//         </div>
-//       );
-//     }
-// });
 
 var Slide = React.createClass({displayName: "Slide",
     render: function(){
